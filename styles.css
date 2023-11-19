@@ -33,42 +33,48 @@ header {
     color: #eee;
 }
 
+nav {
+    margin-bottom: 1em;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    background-color: var(--accent-color);
     margin: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 15px;
 }
 
 nav a {
     text-decoration: none;
     color: #fff;
-    margin: 0 1em;
-    padding: 1em;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 0.5em 1em;
     border-radius: 5px;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
 }
 
 nav a:hover {
-    background-color: #fff;
-    color: var(--accent-color);
+    background-color: #2980b9;
 }
 
 #featured-apartments {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 2em;
+    background-color: #f9f9f9;
+    padding: 3em;
+    text-align: center;
 }
 
 .apartment {
-    width: calc(33.33% - 2em); /* Adjusted width for even distribution with padding */
-    margin: 1em;
-    text-align: center;
+    display: inline-block;
+    width: 400px;
+    margin: 2em;
+    padding: 2.5em;
+    text-align: left;
     background-color: #fff;
-    padding: 1.5em;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
@@ -79,8 +85,48 @@ nav a:hover {
 }
 
 .apartment img {
-    width: 100%; /* Make the image fill its container */
-    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.apartment:hover img {
+    transform: scale(1.1);
+}
+
+.apartment h3 {
+    margin: 0.8em 0;
+    color: #3498db;
+    font-family: 'Arial', sans-serif; /* Change the font-family */
+}
+
+.apartment p {
+    color: #555;
+}
+
+.apartment-details {
+    list-style: none;
+    padding: 0;
+}
+
+.apartment-details li {
+    margin-bottom: 0.5em;
+}
+
+.inquiry-button {
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin-top: 1em;
+    text-decoration: none;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.inquiry-button:hover {
+    background-color: #2980b9;
 }
 
 #gallery {
@@ -119,8 +165,12 @@ nav a:hover {
 }
 
 .member {
+    display: inline-block;
+    width: 200px;
     margin: 1em;
     padding: 1em;
+    text-align: center;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
@@ -132,7 +182,7 @@ nav a:hover {
 
 .member img {
     border-radius: 50%;
-    max-width: 150px;
+    max-width: 100%;
     height: auto;
     transition: transform 0.3s ease-in-out;
 }
@@ -150,13 +200,82 @@ nav a:hover {
     color: #777;
 }
 
+/* ... (previous styles) ... */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+main {
+    padding: 2em;
+}
+
+#contact-form {
+    background-color: #f9f9f9;
+    padding: 2em;
+    text-align: center;
+}
+
+#contact-form h2 {
+    color: #3498db;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin: 1em 0 0.5em;
+    color: #555;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+
 footer {
     background-color: var(--accent-color);
     color: #fff;
     text-align: center;
-    padding: 1em;
+    padding: 0.5em; /* Reduced padding for a smaller footer */
     position: fixed;
     bottom: 0;
     width: 100%;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 0.8em; /* Adjusted font size for smaller screens */
+    margin: 0; /* Remove default margin */
 }

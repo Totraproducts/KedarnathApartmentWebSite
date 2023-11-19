@@ -78,6 +78,34 @@ nav a:hover {
     transform: scale(1.05);
 }
 
+.apartment img {
+    width: 100%; /* Make the image fill its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2em;
+}
+
+.gallery-image {
+    width: 300px;
+    margin: 1em;
+    text-align: center;
+    overflow: hidden; /* Ensure images do not overflow their containers */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Add the following styles to resize gallery images */
+.gallery-image img {
+    width: 100%; /* Make the image fill its container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure the image doesn't exceed its original size */
+}
+
 #member-list {
     background-color: var(--main-background-color);
     padding: 2em;
